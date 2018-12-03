@@ -9,6 +9,13 @@ var keys = require("./keys.js");
 var Spotify = require("node-spotify-api");
 var spotify = new Spotify(keys.spotify);
 
+// Loads bandsintown API.
+// var bandsintown = require('bandsintown');
+
+// Loads the package for searching bandsintown-events API.
+// Used when trying to resolve bandsintown query issues. May not be necessary.
+// var BandsInTownEvents = require('bandsintown-events');
+
 // Loads the package for reading and writing to the random.txt file.
 var fs = require("fs");
 
@@ -18,7 +25,7 @@ var request = require("request");
 // ** BONUS **
 // Output file and package for logging inputs.
 var filename = './log.txt';
-var log = require('simple-node-logger').createSimpleFileLogger( filename );
+var log = require('simple-node-logger').createSimpleFileLogger(filename);
 log.setLevel('all');
 
 // Action requested.
@@ -34,7 +41,7 @@ doSomething(action, argument);
 // Switch operation used to determin which action to take.
 function doSomething(action, argument) {
 
-	// Allows the user to input a third argument if desired.
+    // Allows the user to input a third argument if desired.
     argument = getThirdArgument();
 
     switch (action) {
@@ -72,12 +79,88 @@ function doSomething(action, argument) {
             }
             break;
 
+        // Primary command to request bands in town information from within the application.
+        case "concert-this":
+
+            // Sets band title as the argument.
+            var bandName = argument;
+
+            // If no movie title provided, defaults to specific group.
+            if (bandName === "") {
+                getBandInfo("Lady Gaga");
+
+                // Else looks up concert based on band name.
+            } else {
+                getBandInfo(bandName);
+            }
+            break;
+
         // Gets text inside file, and uses it to do something.
         case "do-what-it-says":
             doWhatItSays();
             break;
     }
 }
+
+// I was unable to resolve the bandsintown API at this time.
+// Inputs are sent to the API and a response is received.
+// Next step is to finish parsing the response and display in the console. 
+
+function getBandInfo(bandName) {
+    var queryUrl = "https://rest.bandsintown.com/artists/" + bandName + "/events?app_id=codingbootcamp";
+
+    request(queryUrl, function (error, response, body) {
+        // If the request is successful...
+        if (!error && response.statusCode === 200) {
+
+            // Debugging...
+            console.log(response);
+
+            // Parses the body of the site and recovers concert info.
+            var concert = JSON.parse(body);
+
+            // Prints out concert info.
+            logOutput("Concert City: " + concert.Events);
+            logOutput("Venue: " + venue.name);
+            logOutput("Date of Event: " + concert.datetime);
+            logOutput("You searched for: ' " + bandName + " '");
+        }
+
+        // Below are my various attempts to get the API working unsuccessfully.
+
+        // bandsintown
+        //     .getArtistEventList('Skrillex')
+        //     .then(function (events) {
+        //         console.log(events);
+        //         // return array of events
+        //     });
+        // var Events = new BandsInTownEvents();
+
+        // //set options for instance
+        // //app_id and artists are required
+        // Events.setParams({
+        //     "app_id": "codingbootcamp", //can be anything
+        //     "artists": [bandName]
+        // });
+
+        // //get your events with success and error callbacks
+        // Events.getEvents(function (events) {
+        //     for (var i = 0; i < events.length; i++) {
+        //         console.log(events[i].venue.city + ", " + events[i].venue.region);
+        //     }
+        // }, function (errors) {
+        //     console.log(errors);
+        // });
+        //     }
+
+        else {
+            // Notifies the user that the search failed and verifies the search.
+            logOutput("You searched for: ' " + bandName + " '");
+            logOutput("Failed. Try again.");
+        }
+    })
+}
+
 
 // Passes a query URL to OMDB to retrieve movie information for movie title.
 // If no movie title provided, defaults to the movie, Mr. Nobody.
@@ -92,6 +175,7 @@ function getMovieInfo(movieTitle) {
 
             // Parses the body of the site and recovers movie info.
             var movie = JSON.parse(body);
+            console.log(response);
 
             // Prints out movie info.
             logOutput("Movie Title: " + movie.Title);
@@ -104,9 +188,7 @@ function getMovieInfo(movieTitle) {
             logOutput("You searched for: ' " + movieTitle + " '");
         }
 
-        else 
-
-        {
+        else {
             // Notifies the user that the search failed and verifies the search.
             logOutput("You searched for: ' " + movieTitle + " '");
             logOutput("Failed. Try again.");

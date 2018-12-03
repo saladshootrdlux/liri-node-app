@@ -18,10 +18,13 @@
   },
   "homepage": "https://github.com/saladshootrdlux/liri-node-app#readme",
   "dependencies": {
+    "bandsintown": "^1.0.1",
+    "bandsintown-events": "^1.0.4",
     "dotenv": "^6.1.0",
     "moment": "^2.22.2",
     "node-spotify-api": "^1.0.7",
     "request": "^2.88.0",
-    "simple-node-logger": "^0.93.40"
+    "simple-node-logger": "^0.93.40",
+    "xhr2": "^0.1.4"
   }
 }

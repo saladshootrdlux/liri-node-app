@@ -2,3 +2,46 @@
 22:22:54.400 INFO  Song: The Sign 
 22:22:54.400 INFO  Spotify Preview URL: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=1b20d2db3ec549e5bfaea3f9156403dd 
 22:22:54.400 INFO  Album Name: The Sign (US Album) [Remastered] 
+10:29:00.064 INFO  Artist(s): Ace of Base 
+10:29:00.064 INFO  Song: The Sign 
+10:29:00.064 INFO  Spotify Preview URL: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=1b20d2db3ec549e5bfaea3f9156403dd 
+10:29:00.064 INFO  Album Name: The Sign (US Album) [Remastered] 
+10:29:07.816 INFO  You searched for: ' metallica ' 
+10:29:08.357 INFO  Artist(s): Metallica 
+10:29:08.358 INFO  Song: Enter Sandman 
+10:29:08.358 INFO  Spotify Preview URL: https://p.scdn.co/mp3-preview/1ee9f1b0c3e3b327dd49ebc6dd64266b01adb96a?cid=1b20d2db3ec549e5bfaea3f9156403dd 
+10:29:08.358 INFO  Album Name: Metallica 
+20:02:23.273 INFO  Movie Title: undefined 
+20:03:44.414 INFO  Concert Title: undefined 
+20:04:00.875 INFO  Concert Title: undefined 
+20:04:24.868 INFO  Concert Title: undefined 
+20:04:24.868 INFO  You searched for: ' nineinchnails ' 
+20:06:10.094 INFO  Concert Title: undefined 
+20:06:10.094 INFO  Venue: undefined 
+20:06:10.094 INFO  Date of Event: undefined 
+20:06:10.094 INFO  You searched for: ' nineinchnails ' 
+20:06:31.764 INFO  Concert Title: undefined 
+20:06:31.764 INFO  Venue: undefined 
+20:06:31.764 INFO  Date of Event: undefined 
+20:06:31.764 INFO  You searched for: ' nineinchnails ' 
+20:07:42.973 INFO  Movie Title: Thor 
+20:07:42.973 INFO  Release Year: 2011 
+20:07:42.973 INFO  IMDB Rating: 7.0 
+20:07:42.973 INFO  Country Produced In: USA 
+20:07:42.973 INFO  Language: English 
+20:07:42.973 INFO  Plot: The powerful, but arrogant god Thor, is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders. 
+20:07:42.979 INFO  Actors: Chris Hemsworth, Natalie Portman, Tom Hiddleston, Anthony Hopkins 
+20:07:42.979 INFO  You searched for: ' thor ' 
+20:33:08.275 INFO  Concert City: undefined 
+21:13:13.507 INFO  Concert City: undefined 
+21:13:13.507 INFO  Venue: undefined 
+21:13:13.507 INFO  Date of Event: undefined 
+21:13:13.507 INFO  You searched for: ' nineinchnails ' 
+21:14:19.293 INFO  Concert City: undefined 
+21:14:19.293 INFO  Venue: undefined 
+21:14:19.293 INFO  Date of Event: undefined 
+21:14:19.293 INFO  You searched for: ' nineinchnails ' 
+21:17:50.210 INFO  Concert City: undefined 
+21:17:50.210 INFO  Venue: undefined 
+21:17:50.210 INFO  Date of Event: undefined 
+21:17:50.210 INFO  You searched for: ' nineinchnails ' 
