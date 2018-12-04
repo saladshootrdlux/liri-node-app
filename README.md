@@ -2,6 +2,10 @@
 
 LIRI stands for "Language Interpretation and Recognition Interface". You can use LIRI to find out about a song, or a movie, or a band that is playing in your area. It accepts a set list of commands illustrated below.
 
+
+## Expected Behavior
+![alt text](https://github.com/saladshootrdlux/liri-node-app/blob/master/liri.gif?raw=true "Logo Title Text 1")
+
 ## Installs
 
 While they are also listed in package.json, for your convenvice, the packages used in this app are also listed below.
